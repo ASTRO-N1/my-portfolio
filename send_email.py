@@ -1,10 +1,12 @@
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import os
+from os import getenv
 
 host = "smtp.gmail.com"
 port = 465
-password = "avbvrrttofeimjpu"
+password = os.getenv("PASSWORD")
 username = "neerajshimpi2912@gmail.com"
 context = ssl.create_default_context()
 receiver = "neerajshimpi2912@gmail.com"
